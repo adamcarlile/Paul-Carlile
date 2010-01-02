@@ -1,0 +1,15 @@
+<%= render :partial => 'layouts/shared/header' %>
+	<div id="content">
+		<div class="wrapper">
+			<%= yield :top %>
+			<div id="main">
+				<%= render_flash %>
+				<%= render_breadcrumb unless @page.type == 'Homepage' %>
+				<%= yield %>
+			</div>
+			<div id="support">
+				<%= yield :support %>
+			</div>
+		</div>
+	</div>
+<%= render :partial => 'layouts/shared/footer' %>

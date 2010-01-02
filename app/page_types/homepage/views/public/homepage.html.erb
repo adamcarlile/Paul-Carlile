@@ -1,0 +1,22 @@
+<% content_for :top do %>
+<div id="banner">
+	<div class="mask">
+	</div>
+	<ul>
+		<%- @banners.each_with_index do |banner, i| %>
+		<li<%= if i > 0 : ' style="display:none;"' end %>>
+			<h3><%= link_to banner.name, banner.url %></h3>
+			<%= link_to image_tag(banner.banner.url(:banner)), banner.url %>
+		</li>
+		<%- end %>
+	</ul>
+</div>
+<% end %>
+
+<h2><%= @page.title %></h2>
+<p><%= @page.intro %></p>
+<%= @page.body %>
+
+<% content_for :support do %>
+<%= render :partial => '/public/support/latestposts' %>
+<% end %>

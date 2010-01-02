@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><%= @page_title %>-<%= SITE_NAME %></title>
+<%= tag 'meta', :content => @meta_keywords, :name => 'keywords' unless @meta_keywords.blank? %><%= tag 'meta', :content => @meta_description, :name => 'description' unless @meta_description.blank? %>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<%= stylesheet_link_tag '/stylesheets/main.css' %>
+<%= stylesheet_link_tag '/stylesheets/print.css', :media => 'print' %>
+<!--[if IE]>
+<%= stylesheet_link_tag '/stylesheets/ie/all.css', :media => 'screen,projection' %>
+<![endif]-->
+<!--[if IE 6]>
+<%= stylesheet_link_tag '/stylesheets/ie/6.css', :media => 'screen,projection' %>
+<![endif]-->
+<!--[if IE 7]>
+<%= stylesheet_link_tag '/stylesheets/ie/7.css', :media => 'screen,projection' %>
+<![endif]-->
+<!--[if IE 8]>
+<%= stylesheet_link_tag '/stylesheets/ie/8.css', :media => 'screen,projection' %>
+<![endif]-->
+<!-- Javascript -->
+<script src="/javascripts/cufon.js" type="text/javascript"></script>
+<script src="/javascripts/museo.font.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.js" type="text/javascript"></script>
+<script src="/javascripts/innerfade.jquery.js" type="text/javascript"></script>
+<script src="/javascripts/application.js" type="text/javascript"></script>
+<%= yield :head %>
+</head>
+<div id="body">
+	<div id="header">
+		<div class="wrapper">
+			<h1 class="logo">Paul Carlile</h1>
+			<h2 class="strap">Restorative Principles in Practice</h2>
+			<div class="navigation">
+				<%= render_global_nav %>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,14 @@
+<div class="sidebar">
+	<div class="inner">
+		<h4>Latest Blog Posts</h4>
+		<ul class="posts">
+			<% @posts.each do |post| %>
+			<li>
+				<%= datebox(post.publish_from)%>
+				<h3><%= post.title %></h3>
+				<p><%= post.intro %></p>
+			</li>
+			<% end %>
+		</ul>
+	</div>
+</div>

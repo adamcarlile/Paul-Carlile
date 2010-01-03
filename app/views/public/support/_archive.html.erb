@@ -1,0 +1,10 @@
+<div class="sidebar">
+	<div class="inner">
+  	<h4>Blog Post Archives</h4>
+  	<ul class="nav">
+  	  <% for month in NewsIndex.archive_months -%>
+  	  <li><%= link_to "#{Date::MONTHNAMES[month[:month]]} #{month[:year]}", url_for_page(@page, month) %></li>
+  	  <% end -%>
+  	</ul>
+	</div>
+</div>

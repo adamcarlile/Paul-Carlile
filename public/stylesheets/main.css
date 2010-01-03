@@ -36,7 +36,6 @@ div#body
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-color:#333333;
-	padding-bottom:30px;
 }
 
 div#header
@@ -151,6 +150,7 @@ div#main
 {
 	width:540px;
 	float:left;
+	margin-bottom:30px;
 }
 
 div#main h2
@@ -199,6 +199,7 @@ div.sidebar
 	background-position:bottom;
 	background-repeat:no-repeat;
 	margin-top:10px;
+	margin-bottom:30px;
 }
 
 div.sidebar div.inner
@@ -210,7 +211,7 @@ div.sidebar div.inner
 	position:relative;
 }
 
-div.sidebar div.inner ul.posts
+div.sidebar div.inner ul.posts, div.sidebar div.inner ul.nav
 {
 	padding:20px;
 	padding-top:15px;
@@ -223,6 +224,7 @@ div.sidebar div.inner ul.posts li
 	padding-bottom:10px;
 	padding-top:10px;
 }
+
 
 ul.posts li h3
 {
@@ -348,4 +350,116 @@ div.madeby p
 	font-size:1.1em;
 	margin-right:20px;
 	color:#627076;
+}
+
+/*==============FORMS=============*/
+
+form fieldset p
+{
+	overflow:hidden;
+	background-image:url(../images/form_field.gif);
+	background-repeat:no-repeat;
+	position:relative;
+	width:540px;
+	height:55px;
+	margin-bottom:20px;
+}
+
+form fieldset.textarea p
+{
+	height:auto;
+}
+
+form fieldset.textarea p textarea
+{
+	margin-top:20px;
+	width:530px;
+	font-family:Helvetica, arial;
+	padding:5px;
+	border:1px solid #000;
+}
+
+form fieldset p input
+{
+	position:absolute;
+	border:none;
+	top:27px;
+	left:5px;
+	width:440px;
+	font-size:1.2em;
+	letter-spacing:-1px;
+	font-family:Helvetica, arial;
+}
+
+form fieldset p label
+{
+	position:absolute;
+	font-size:1.0em;
+	top:1px;
+	left:1px;
+	color:#ffffff;
+	font-weight:bold;
+	display:block;
+	width:130px;
+	padding-left:5px;
+	padding-top:0px;
+	padding-bottom:0px;
+	text-shadow: 1px 1px 0px #000;
+}
+
+form p.note
+{
+	font-size:10px !important;
+	float:left;
+	width:350px;
+	padding-left:20px;
+}
+
+form fieldset br
+{
+	display:none;
+}
+
+form fieldset p span.formError
+{
+	position:absolute;
+	top:1px;
+	left:150px;
+	padding-left:5px;
+	padding-top:0px;
+	font-size:1.0em;
+	color:#c71515;
+}
+
+form fieldset p.withError
+{
+	background-image:url(../images/form_field_error.gif);
+}
+
+form input.submit
+{
+	background-image:url(../images/button_blue.gif);
+	background-color:transparent;
+	text-align:center;
+	width:145px;
+	line-height:-5px;
+	height:58px;
+	font-size:1.4em;
+	float:left;
+	font-weight:bold;
+	color:#ffffff;
+	border:none;
+	text-shadow: 1px 1px 0px #000;
+	cursor:pointer;
+	font-family:Helvetica, arial;
+}
+
+div#recaptcha_widget_div
+{
+	margin-bottom:20px;
+}
+
+form input.submit:hover
+{
+	background-image:url(../images/button_green.gif);
 }

@@ -1,0 +1,8 @@
+<%- unless @root_page.published_children_for_nav.empty? %>
+<div class="sidebar">
+	<div class="inner">
+		<h4><%= @root_page %></h4>
+		<%= render_list_nav @root_page %>
+	</div>
+</div>
+<% end %>

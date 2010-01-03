@@ -1,0 +1,44 @@
+<% content_for :support do %>
+<%= render :partial => '/public/support/subnav' %>
+<%= render :partial => '/public/support/latestposts' %>
+<% end %>
+
+
+<% if params[:sent] %>
+
+  <%= render 'contact_form/views/public/contact_form_sent' %>
+
+<% else %>
+
+  <%= render 'public/shared/page_body' %>
+
+  <% form_for :enquiry, @enquiry, :url => enquiries_url, :html => {:id => 'enquiry_form'} do |f| %>
+		<fieldset>
+    <%= hidden_field_tag :slug_path, @page.slug_path %>
+    <%= f.field :name, :label => 'Name' %>
+    <%= f.field :email, :label => 'Email' %>
+		</fieldset>
+		
+		<fieldset class="textarea">
+    <%= f.field :message, 
+      :helper => :text_area, 
+      :helper_options => {:rows => 8},
+      :label => 'Enquiry'
+    %>
+		</fieldset>
+		
+    <div class="form_margin">		
+      <p>Be among the first to hear about new developments</p>
+      <%= f.field :newsletter, :helper => :check_box, :label => 'Sign up now to our newsletter' %>
+    </div>
+
+    <%= recaptcha_tags %>
+
+    <input type="submit" id="submitbutton" value="Send message" class="submit" />
+		
+		</fieldset>
+		
+    <p class="note">Please note your details will be kept confidential and will never be passed on to any third parties.</p>
+  <% end %>
+
+<% end %>

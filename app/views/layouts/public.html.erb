@@ -8,7 +8,7 @@
 				<%= yield %>
 			</div>
 			<div id="support">
-				<%= yield :support %>
+				<%= yield(:support) || render('/layouts/shared/default_support') %>
 			</div>
 		</div>
 	</div>

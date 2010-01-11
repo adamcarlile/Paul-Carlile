@@ -1,15 +1,23 @@
 <%- content_for :support do -%>
 <%= render :partial => '/public/support/archive' %>
+<%= render :partial => '/public/support/subscribe' %>
+<%= render :partial => '/public/support/callouts' %>
 <%- end -%>
 
 <%= render 'public/shared/page_body' %>
 
 <% for news_item in @news_items %>
 <div class="divider">
-	<h2><%= link_to "#{news_item.title}", url_for_page(news_item) %></h2>
-	<p class="date"><%= format_date news_item.created_at %></p>
+	<h3><%= link_to "#{news_item.title}", url_for_page(news_item) %></h3>
+	<%= datebox news_item.created_at %>
+	<%= link_to(image_tag(news_item.images.first.permenant_url(:thumb), :height => '50', :width => '50'), url_for_page(news_item)) unless news_item.images.empty? %>
 	<p><%= news_item.intro %></p>
-	<p class="readmore"><%= link_to 'Read the rest of this entry', url_for_page(news_item), :title => "Read the rest of the article '#{news_item.title}'" %></p>
+	<ul class="articlebar">
+		<li class="more"><%= link_to 'Read more', url_for_page(news_item), :title => "Read more about '#{news_item.title}'" %></li>
+		<%- if news_item.show_comments? %>
+		<li class="comment"><%= link_to "#{pluralize news_item.comments.length, 'comment'}", url_for_page(news_item, :anchor => 'comments') %></li>
+		<%- end %>
+	</ul>
 </div>
 <% end %>
 

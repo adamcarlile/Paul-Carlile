@@ -1,0 +1,7 @@
+<h2><%= h @page.title %></h2>
+<% if @page.intro?  %>
+<p id="intro"><%= @page.intro %></p>
+<% end %>
+<%= @page.body %>
+
+<%= render_tag_list @page %>

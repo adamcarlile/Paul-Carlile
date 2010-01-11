@@ -153,6 +153,11 @@ div#main
 	margin-bottom:30px;
 }
 
+div#main p#intro
+{
+	font-weight:bold;
+}
+
 div#main h2
 {
 	font-size:2.8em;
@@ -211,11 +216,51 @@ div.sidebar div.inner
 	position:relative;
 }
 
-div.sidebar div.inner ul.posts, div.sidebar div.inner ul.nav
+div.sidebar div.inner ul.posts, div.sidebar div.inner ul.nav, div.sidebar div.inner ul.posts, div.sidebar div.inner p.rss
 {
 	padding:20px;
 	padding-top:15px;
 	padding-bottom:10px;
+}
+
+div.sidebar div.inner ul.nav li a
+{
+	font-size:1.4em;
+	color:#5f5f5f;
+}
+
+div.sidebar div.inner p.rss
+{
+	font-size:1.4em;
+	line-height:1.6em;
+	padding-left:22px;
+	margin-left:20px;
+	background-image:url(../images/icons/feed.png);
+	background-repeat:no-repeat;
+	background-position:0px 17px;
+}
+
+div.sidebar div.inner ul.nav li a:hover
+{
+	color:#88ca84;
+	text-decoration:none;
+}
+
+div.sidebar div.inner ul.nav li.current a
+{
+	color:#bcdbe9;
+}
+
+div.sidebar div.inner ul.nav li
+{
+	padding-top:10px;
+	padding-bottom:10px;
+	border-bottom:1px solid #5f5f5f;
+}
+
+div.sidebar div.inner ul.nav li.last, div.sidebar div.inner ul.nav li:last-child
+{
+	border-bottom:none;
 }
 
 div.sidebar div.inner ul.posts li
@@ -225,6 +270,12 @@ div.sidebar div.inner ul.posts li
 	padding-top:10px;
 }
 
+div.sidebar div.inner ul.nav > li > ul.nav
+{
+	padding:0px;
+	padding-left:15px;
+	font-size:0.8em;
+}
 
 ul.posts li h3
 {
@@ -352,6 +403,118 @@ div.madeby p
 	color:#627076;
 }
 
+/*==============CALLOUT============*/
+
+ul#callouts 
+{
+	margin-bottom:20px;
+	overflow:hidden;
+	margin-top:-10px;
+}
+
+ul#callouts li
+{
+	position:relative;
+	height:85px;
+	width:180px;
+	float:left;
+	margin-right:20px;
+}
+
+ul#callouts li.two
+{
+	margin-right:0px;
+}
+
+ul#callouts li > a
+{
+	display:block;
+	height:85px;
+	width:180px;
+	overflow:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-image:url(../images/global/callout-mask.png);
+}
+
+ul#callouts li:hover a
+{
+	color:#88ca84 !important;
+	text-decoration:none;
+}
+
+ul#callouts li h5 > a
+{
+	position:absolute;
+	left:0px;
+	bottom:20px;
+	font-size:1.1em;
+	font-weight:bold;
+	padding:5px;
+	color:#8ebbd0;
+	background-color:rgba(0,0,0,0.75);
+}
+
+
+/*==============NEWSITEM=============*/
+
+div.divider
+{
+	border-bottom:1px solid #5f5f5f;
+	padding-bottom:10px;
+	padding-top:20px;
+}
+
+div.divider a img
+{
+	border:5px solid #5f5f5f;
+	float:right;
+	margin-left:10px;
+}
+
+div.divider a:hover img
+{
+	border:5px solid #88ca84;
+}
+
+div.divider ul.articlebar
+{
+	overflow:hidden;
+	clear:both;
+}
+
+div.divider ul.articlebar li
+{
+	float:left;
+	margin-right:20px;
+	background-repeat:no-repeat;
+	padding-left:22px !important;
+	background-position:left center;
+}
+
+div.divider ul.articlebar li.more
+{
+	background-image:url(../images/icons/book-open-next.png) !important;
+}
+
+div.divider ul.articlebar li.comment
+{
+	background-image:url(../images/icons/balloon.png) !important;
+}
+
+div.divider ul.articlebar li a
+{
+	font-size:10px;
+}
+
+div.divider h3
+{
+	font-size:2em;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+
 /*==============FORMS=============*/
 
 form fieldset p
@@ -462,4 +625,54 @@ div#recaptcha_widget_div
 form input.submit:hover
 {
 	background-image:url(../images/button_green.gif);
+}
+
+/*=============FLASH============*/
+
+div.flash
+{
+	font-size:1.4em;
+	color:#ffffff;
+	padding:10px;
+	margin-bottom:20px;
+	border:1px solid #000000;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#000000;
+	-moz-box-shadow:1px 1px 2px #000000;
+	-webkit-box-shadow:1px 1px 2px #000000;
+	box-shadow:1px 1px 2px #000000;
+	font-weight:bold;
+	text-shadow: 1px 1px 0px #000;
+	margin-top:12px;
+}
+
+div.flash span
+{
+	padding-left:30px;
+	background-position:left center;
+	background-repeat:no-repeat;
+}
+
+div#error.flash
+{
+	background-color:#C71515;
+	border-color:#ea4d4d;
+}
+
+div#error.flash span
+{
+	background-image:url(../images/icons/exclamation.png);
+}
+
+div#notice.flash
+{
+	background-color:#8ebbd0;
+	border-color:#bcdbe9;
+}
+
+div#notice.flash span
+{
+	background-image:url(../images/icons/information.png);
 }

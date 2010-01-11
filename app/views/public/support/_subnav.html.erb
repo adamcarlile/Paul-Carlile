@@ -1,3 +1,4 @@
+<%- if @root_page %>
 <%- unless @root_page.published_children_for_nav.empty? %>
 <div class="sidebar">
 	<div class="inner">
@@ -5,4 +6,5 @@
 		<%= render_list_nav @root_page %>
 	</div>
 </div>
+<% end %>
 <% end %>

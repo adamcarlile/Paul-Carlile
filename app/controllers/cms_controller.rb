@@ -2,7 +2,7 @@ require File.join('vendor/plugins/cms-engine/app/controllers/cms_controller')
 class CMSController < ActionController::Base
   helper :all
   
-  before_filter :get_posts
+  before_filter :get_posts, :get_callouts
     
   #Check to make sure we are in production mode
   unless ActionController::Base.consider_all_requests_local
@@ -23,8 +23,8 @@ class CMSController < ActionController::Base
     render :template => 'public/500', :status => :internal_server_error
   end
   
-  def footer_news
-    @footernews = NewsItem.latest(4)
+  def get_callouts
+    @callouts = Callout.all
   end
   
 end

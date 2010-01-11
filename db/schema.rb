@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091217135521) do
+ActiveRecord::Schema.define(:version => 20100106110109) do
 
   create_table "acts_as_xapian_jobs", :force => true do |t|
     t.string  "model",    :null => false
@@ -38,6 +38,19 @@ ActiveRecord::Schema.define(:version => 20091217135521) do
     t.string   "banner_content_type"
     t.integer  "banner_file_size"
     t.datetime "banner_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "callouts", :force => true do |t|
+    t.string   "title"
+    t.string   "subtitle"
+    t.string   "url"
+    t.integer  "position"
+    t.string   "callout_file_name"
+    t.string   "callout_content_type"
+    t.integer  "callout_file_size"
+    t.datetime "callout_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

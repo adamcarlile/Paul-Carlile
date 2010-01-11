@@ -1,0 +1,13 @@
+<% if @callouts %>
+<ul id="callouts" >
+<%- @callouts.each do |callout| %>
+	<li class="<%= cycle('one', 'two')%>">
+		<a href="<%= callout.url %>">
+		</a>
+		<h5><%= link_to (callout.title, callout.url) %></h5>
+		<%= content_tag('p', callout.subtitle) unless callout.subtitle.empty? %>
+		<%= image_tag callout.callout(:standard) %>
+	</li>
+<%- end %>
+<ul>
+<% end %>

@@ -1,0 +1,19 @@
+<fieldset id="callouts">
+	<div class="title">
+	<%= f.field :title, :label => 'Title' %>
+	</div>
+	<%= f.field :subtitle %>
+	<%= f.field :url %>
+	<div class="left">
+		<p>
+			<%= f.label :callout %><br />
+			<%= f.file_field :callout %>
+		</p>
+	</div>
+	<div class="right">
+		<% if @object.callout %>
+			<%= image_tag @object.callout.url(:standard) %> 
+		<% end %>
+	</div>
+</fieldset>
+<%= render 'admin/generic/resource_buttons' %>

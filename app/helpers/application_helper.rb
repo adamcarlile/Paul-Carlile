@@ -6,4 +6,10 @@ module ApplicationHelper
     output += content_tag('span', (date.strftime("%b")).upcase, :class => "month")
     output += %(</div>)
   end
+  
+  def format_time(time)
+    return '' if time.nil?
+    time.to_time.strftime("%H:%M")
+  end
+  
 end

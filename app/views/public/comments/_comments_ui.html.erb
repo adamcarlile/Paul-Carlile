@@ -1,0 +1,14 @@
+<div id="comments">
+<% if @page.show_comments? %>
+  <h3><%= pluralize @comments.length, 'comment' %></h3>
+
+  <%= render :collection => @comments, :partial => 'public/comments/comment' %>
+
+  <% if @page.allow_new_comments? %>
+    <%= render 'public/comments/form' %>
+  <% else %>
+    <p>Commenting has been disabled for this page.</p>
+  <% end %>
+
+<% end %>
+</div>

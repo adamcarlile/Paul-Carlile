@@ -1,12 +1,14 @@
 <div class="sidebar">
 	<div class="inner">
 		<h4>Email Newsletter</h4>
-		<form action="http://bench.createsend.com/t/r/s/tultlk/" method="post">
-		<div>
-		<label for="name">Name:</label><br /><input type="text" name="cm-name" id="name" /><br />
-		<label for="tultlk-tultlk">Email:</label><br /><input type="text" name="cm-tultlk-tultlk" id="tultlk-tultlk" /><br />
-		<input type="submit" value="Subscribe" />
+		<form action="http://bench.createsend.com/t/r/s/tultlk/" method="post" id="newsletter">
+		<p>Sign up to receive my Restorative Practice newsletter</p>
+		<div style="float:left; width:180px; overflow:hidden">
+			<input type="text" name="cm-name" value="Your Name" onfocus="if (this.value == 'Your Name') this.value = ''" onblur="if (this.value == '') this.value = 'Your Name'" id="name" style="float:left; margin-bottom:10px; width:100%"/>
+			<input type="text" value="Your Email Address" onfocus="if (this.value == 'Your Email Address') this.value = ''" onblur="if (this.value == '') this.value = 'Your Email Address'" name="cm-tultlk-tultlk" id="tultlk-tultlk" style="float:left; width:100%" />
 		</div>
+		<input type="submit" value="Sign Up" class="submit" style="float:right;" />
+		<br style="clear:both" />
 		</form>
 	</div>
 </div>

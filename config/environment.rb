@@ -16,6 +16,7 @@ Rails::Initializer.run do |config|
 
   # Specify gems that this application depends on and have them installed with rake gems:install
   config.gem 'gravtastic', :version => '>= 2.1.0'
+  config.gem 'httparty'
 
   eval(File.read("#{RAILS_ROOT}/vendor/plugins/cms-engine/config/environment.rb"))
   
@@ -33,6 +34,8 @@ Rails::Initializer.run do |config|
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'UTC'
+  
+  config.cache_store = :file_store, "#{RAILS_ROOT}/tmp/cache"
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]

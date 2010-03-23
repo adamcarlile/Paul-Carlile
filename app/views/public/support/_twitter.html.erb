@@ -1,0 +1,20 @@
+<div class="sidebar">
+	<div class="inner">
+		<h4>Twitterfeed</h4>
+			<div class="twitter">
+	<%- cache("twitter_#{Time.now.hour}_#{Date.today.day}") do %>
+	<% begin 
+			@twitter = Twitter.latest_posts.first
+		 rescue
+			@twitter = "error" 
+		 end %>
+			<%- if @twitter == "error" %>
+			<p>Oops looks like we cant connect to twitter right now</p>
+			<%- else %>
+			<p><img src="<%= @twitter['user']['profile_image_url'] %>" alt="image" /><%= @twitter['text'] %></p>
+			<%- end %>	
+			<p class="followus"><a href="http://twitter.com/paulcarlile">Follow</a> our updates on <a href="http://twitter.com/paulcarlile">Twitter</a>!</p>
+			</div>
+	<%- end %>
+	</div>
+</div>

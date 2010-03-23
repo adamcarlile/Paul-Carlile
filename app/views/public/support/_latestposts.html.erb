@@ -6,7 +6,7 @@
 			<% @posts.each do |post| %>
 			<li>
 				<%= datebox(post.publish_from)%>
-				<h3><%= post.title %></h3>
+				<h3><%= link_to_page(post) %></h3>
 				<p><%= truncate post.intro, :length => 95 %></p>
 			</li>
 			<% end %>

@@ -217,6 +217,11 @@ div#main p
 	line-height:1.7em;
 }
 
+div#main ul
+{
+	margin-bottom:20px;
+}
+
 div#main ul li
 {
 	font-size:1.4em;

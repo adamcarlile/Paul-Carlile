@@ -592,7 +592,7 @@ div.divider ul.articlebar
 {
 	overflow:hidden;
 	clear:both;
-	margin-bottom:0px;
+	margin-bottom:0px !important;
 }
 
 div.divider ul.articlebar li

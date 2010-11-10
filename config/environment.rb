@@ -16,7 +16,7 @@ Rails::Initializer.run do |config|
 
   # Specify gems that this application depends on and have them installed with rake gems:install
   config.gem 'gravtastic', :version => '>= 2.1.0'
-  config.gem 'httparty'
+  config.gem 'grackle'
 
   eval(File.read("#{RAILS_ROOT}/vendor/plugins/cms-engine/config/environment.rb"))
   

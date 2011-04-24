@@ -7,6 +7,14 @@ module ApplicationHelper
     output += %(</div>)
   end
   
+  def gravatize(email, options={})
+    default_options = {:size => 60}
+    options = default_options.update(options)
+    crypted_email = Digest::MD5.hexdigest(email)
+    output = "http://www.gravatar.com/avatar/#{crypted_email}?s=#{options[:size]}"
+    return image_tag(output).html_safe
+  end
+  
   def format_time(time)
     return '' if time.nil?
     time.to_time.strftime("%H:%M")

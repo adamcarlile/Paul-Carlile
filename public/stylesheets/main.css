@@ -64,7 +64,7 @@ h2.strap
 div.navigation
 {
 	float:right;
-	margin-top:15px;
+	margin-top:10px;
 }
 
 div.navigation ul li
@@ -325,14 +325,14 @@ div.sidebar div.inner form#newsletter p
 	margin-bottom:10px;
 }
 
-div.sidebar div.inner ul.posts, div.sidebar div.inner ul.nav, div.sidebar div.inner ul.posts, div.sidebar div.inner p.rss
+div.sidebar div.inner ul.posts, div.sidebar div.inner nav#subnav, div.sidebar div.inner ul.posts, div.sidebar div.inner p.rss
 {
 	padding:20px;
 	padding-top:15px;
 	padding-bottom:10px;
 }
 
-div.sidebar div.inner ul.nav li a
+div.sidebar div.inner nav#subnav li a
 {
 	font-size:1.4em;
 	color:#5f5f5f;
@@ -349,25 +349,25 @@ div.sidebar div.inner p.rss
 	background-position:0px 17px;
 }
 
-div.sidebar div.inner ul.nav li a:hover
+div.sidebar div.inner nav#subnav li a:hover
 {
 	color:#88ca84;
 	text-decoration:none;
 }
 
-div.sidebar div.inner ul.nav li.current a
+div.sidebar div.inner nav#subnav li.current a
 {
 	color:#bcdbe9;
 }
 
-div.sidebar div.inner ul.nav li
+div.sidebar div.inner nav#subnav li
 {
 	padding-top:10px;
 	padding-bottom:10px;
 	border-bottom:1px solid #5f5f5f;
 }
 
-div.sidebar div.inner ul.nav li.last, div.sidebar div.inner ul.nav li:last-child
+div.sidebar div.inner nav#subnav li.last, div.sidebar div.inner nav#subnav li:last-child
 {
 	border-bottom:none;
 }
@@ -379,7 +379,7 @@ div.sidebar div.inner ul.posts li
 	padding-top:10px;
 }
 
-div.sidebar div.inner ul.nav > li > ul.nav
+div.sidebar div.inner nav#subnav > li > nav#subnav
 {
 	padding:0px;
 	padding-left:15px;
@@ -913,4 +913,21 @@ div#main img.hero_image
 form#new_comment .recaptchatable #recaptcha_response_field
 {
     position:static !important;
+}
+
+ul.contact-details
+{
+	float: right;
+}
+
+ul.contact-details li
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-size: 14px;
+}
+
+ul.contact-details li strong
+{
+	font-weight: bold;
 }
